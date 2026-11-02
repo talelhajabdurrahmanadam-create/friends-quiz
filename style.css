@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+ /* softer lavender gradient */
+  background-color: #f9f2ff; /* softer lavender gradient */
+  padding: 20px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.quiz-container {
+  max-width: 600px;
+  width: 95%; /* fills most of the screen on small devices */
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+}
+
+/* Headings adapt to screen */
+h1{
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  margin-bottom: 20px;
+  color: rgb(126, 25, 121);
+}
+
+#question{
+    color: rgb(126, 25, 121);
+}
+
+button {
+  padding: 14px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #9b59b6;
+  color: rgb(126, 25, 121);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%; /* full width for mobile */
+  max-width: 280px;
+}
+
+button:hover {
+  background: #8e44ad;
+  transform: translateY(-2px);
+}
+
+.answer-btn {
+  display: block;
+  margin: 12px auto;
+  padding: 14px;
+  background: #f3e6ff; /* softer lavender shade */
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #bdc3c7;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 500px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.answer-btn:hover {
+  background: #e6ccff;
+  transform: scale(1.02);
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .quiz-container {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  button, .answer-btn {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+/* 📱 Tablets */
+
+/* 💻 Large desktops */
+@media (min-width: 1200px) {
+  .quiz-container {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+  .quiz-container {
+    max-width: 700px;
+    padding: 20px;
+  }
+
+  .answer-btn {
+    font-size: 1rem;
+    padding: 16px;
+  }
+}
+
